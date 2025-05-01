@@ -21,7 +21,7 @@ function Navbar() {
         {/* Cart icon link */}
         <Link to="/cart">
           <img
-            src="/cart.png" // Replace with the actual cart icon file in the public folder
+            src="/cart.png"
             alt="Cart"
             className="App-navbar-cart-icon"
           />

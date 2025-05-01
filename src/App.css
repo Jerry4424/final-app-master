@@ -269,6 +269,27 @@ body {
   background-color: #007a3d;
 }
 
+.App-order-quantity-input {
+  width: 40px; /* Reduced width for smaller input boxes */
+  margin: 0 10px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #2a2a2a; /* Dark input background */
+  color: white; /* White text */
+}
+
+.App-order-quantity-input::-webkit-inner-spin-button,
+.App-order-quantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: auto; /* Show the arrows for increasing/decreasing */
+}
+
+.App-order-quantity-input:focus {
+  outline: none;
+  border-color: #00a651; /* Highlight border on focus */
+}
+
 /* Admin Dashboard */
 .App-admin-dashboard {
   padding: 20px;
@@ -415,6 +436,12 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  padding-bottom: 10px; /* Add padding below the item for spacing */
+  border-bottom: 1px solid #ccc; /* Add a line under each item */
+}
+
+.App-cart-item:last-child {
+  border-bottom: none; /* Remove the line under the last item */
 }
 
 .App-cart-remove-button {
@@ -424,10 +451,11 @@ body {
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .App-cart-remove-button:hover {
-  background-color: #cc0000;
+  background-color: #cc0000; /* Darker red for hover */
 }
 
 .App-cart-order-button {
@@ -442,6 +470,11 @@ body {
 
 .App-cart-order-button:hover {
   background-color: #007a3d; /* Darker green for hover */
+}
+
+.App-cart-item:hover {
+  background-color: #2a2a2a; /* Slightly darker background on hover */
+  transition: background-color 0.3s ease;
 }
 
 .App-login-inline {

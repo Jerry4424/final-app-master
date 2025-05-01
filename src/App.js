@@ -3,6 +3,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AppRouter from './AppRouter';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import './App.css';
+
+function Header() {
+  return (
+    <header className="App-header">
+      <img src="/logo.png" className="App-logo" alt="logo" />
+    </header>
+  );
+}
 
 function App() {
   return (
@@ -19,3 +28,4 @@ function App() {
 }
 
 export default App;
+export { Header };
