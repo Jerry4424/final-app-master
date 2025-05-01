@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../UserContext';
+import '../App.css'; // Import the CSS file for styling
 
 function LoginPage() {
   const [email, setEmail] = useState('');
@@ -16,25 +17,28 @@ function LoginPage() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        /><br/>
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        /><br/>
-        
-        <button type="submit">Login</button>
+    <div className="App-login">
+      <h2 className="App-login-title">Login</h2>
+      <form className="App-login-form" onSubmit={handleLogin}>
+        <div className="App-login-inline">
+          <input
+            className="App-login-input"
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            className="App-login-input"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button className="App-login-button" type="submit">Login</button>
+        </div>
       </form>
     </div>
   );
