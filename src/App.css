@@ -1,0 +1,431 @@
+/* General Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+  background-color: #121212; /* Dark background */
+  font-family: 'Arial', sans-serif;
+  color: white; /* White text */
+}
+
+/* General App Styles */
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: white; /* White text */
+  background-color: #121212; /* Dark background */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure the background fits the screen */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Homepage Content */
+.App-main-content {
+  flex-grow: 1; /* Allow the content to grow and fill the remaining space */
+  padding: 20px;
+  background-color: #1e1e1e; /* Slightly lighter dark background */
+  color: white; /* White text for contrast */
+}
+
+/* Logo */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  display: none; /* Hide the spinning logo */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Header */
+.App-header {
+  background-color: #1e1e1e; /* Slightly lighter dark background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; /* White text */
+  padding: 50px 20px;
+  text-align: left;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.App-header p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Links */
+.App-link {
+  display: inline-block;
+  background-color: #00a651; /* Sage's green */
+  color: white; /* White text */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.App-link:hover {
+  background-color: #007a3d; /* Darker green for hover */
+}
+
+/* Content */
+.App-content {
+  padding: 40px 20px;
+  text-align: left;
+  color: white; /* White text */
+}
+
+.App-content h2 {
+  font-size: 2rem;
+  color: #00a651; /* Sage's green for headings */
+  margin-bottom: 20px;
+}
+
+.App-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Navbar */
+.App-navbar {
+  position: relative; /* Allow the navbar to scroll off the screen */
+  width: 100%; /* Full width of the parent container */
+  background-color: #1e1e1e; /* Slightly lighter dark background */
+  padding: 10px 20px; /* Adjust padding to avoid extra space */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #00a651; /* Sage's green border */
+  z-index: 1000; /* Ensure it stays above other elements */
+  margin: 0; /* Remove any default margins */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.App-navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.App-navbar-logo {
+  height: 60px; /* Increased the height to make the logo bigger */
+  margin-right: 10px;
+}
+
+.App-navbar-center {
+  display: flex;
+  justify-content: center; /* Center the links */
+  flex-grow: 1;
+  gap: 20px; /* Add spacing between links */
+  margin-left: auto; /* Push the links to the center */
+  margin-right: auto; /* Ensure the links stay centered */
+}
+
+.App-navbar-link {
+  text-decoration: none;
+  color: white; /* White text for links */
+  font-weight: bold;
+}
+
+.App-navbar-link:hover {
+  color: #00a651; /* Sage's green for hover */
+}
+
+.App-navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.App-navbar-cart-icon {
+  height: 30px; /* Adjust the size of the cart icon */
+  cursor: pointer;
+}
+
+.App-navbar-text {
+  font-size: 1.2rem; /* Adjust font size for the text */
+  color: white; /* White text */
+  font-weight: bold;
+}
+
+/* Footer */
+.App-footer {
+  background-color: #007a3d; /* Dark green background */
+  color: white; /* White text */
+  padding: 0.5px; /* Adjusted padding to 0.5px */
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.App-footer a {
+  color: #00a651; /* Sage's green for links */
+  text-decoration: none;
+}
+
+.App-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Special Offer Card */
+.App-special-offer-card {
+  border: 1px solid #00a651; /* Sage's green */
+  background-color: #2a2a2a; /* Dark card background */
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  color: white; /* White text */
+}
+
+.App-special-offer-button {
+  background-color: #00a651; /* Sage's green */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.App-special-offer-button:hover {
+  background-color: #007a3d; /* Darker green for hover */
+}
+
+/* Product Card */
+.App-product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  border-radius: 8px;
+  background-color: #2a2a2a; /* Dark card background */
+  color: white; /* White text */
+}
+
+.App-product-card-button {
+  background-color: #00a651; /* Sage's green */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.App-product-card-button:hover {
+  background-color: #007a3d; /* Darker green for hover */
+}
+
+/* Order Materials Page */
+.App-order-materials {
+  padding: 20px;
+  color: white; /* White text */
+}
+
+.App-order-item {
+  margin-bottom: 10px;
+}
+
+.App-order-button {
+  margin-left: 10px;
+  background-color: #00a651;
+  color: white; /* White text */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.App-order-button:hover {
+  background-color: #007a3d;
+}
+
+/* Admin Dashboard */
+.App-admin-dashboard {
+  padding: 20px;
+  color: white; /* White text */
+}
+
+.App-admin-input {
+  margin-bottom: 20px;
+}
+
+.App-admin-input input {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #2a2a2a; /* Dark input background */
+  color: white; /* White text */
+}
+
+.App-admin-input button {
+  background-color: #00a651; /* Sage's green */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.App-admin-input button:hover {
+  background-color: #007a3d; /* Darker green for hover */
+}
+
+.App-admin-services {
+  list-style: none;
+  padding: 0;
+}
+
+.App-admin-service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  color: white; /* White text */
+}
+
+.App-admin-service-item button {
+  background-color: #ff4d4d; /* Red for remove */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.App-admin-service-item button:hover {
+  background-color: #cc0000;
+}
+
+/* Admin Login */
+.App-login {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.App-login-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.App-login-form {
+  display: inline-block;
+  text-align: left;
+}
+
+.App-login-input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.App-login-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.App-login-button:hover {
+  background-color: #0056b3;
+}
+
+/* Admin and Login Buttons */
+.App-login-link button,
+.App-admin-link button {
+  background-color: #007bff; /* Blue for buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.App-login-link button:hover,
+.App-admin-link button:hover {
+  background-color: #0056b3; /* Darker blue for hover */
+}
+
+/* Not Found Page */
+.App-not-found {
+  text-align: center;
+  margin-top: 50px;
+  color: white; /* White text */
+}
+
+/* Cart Page */
+.App-cart {
+  padding: 20px;
+  color: white; /* White text */
+}
+
+.App-cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.App-cart-remove-button {
+  background-color: #ff4d4d; /* Red for remove */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.App-cart-remove-button:hover {
+  background-color: #cc0000;
+}
+
+.App-cart-order-button {
+  background-color: #00a651; /* Sage's green */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.App-cart-order-button:hover {
+  background-color: #007a3d; /* Darker green for hover */
+}
