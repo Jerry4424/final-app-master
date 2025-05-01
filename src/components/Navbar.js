@@ -8,7 +8,7 @@ function Navbar() {
       <div className="App-navbar-left">
         {/* Use the logo from the public folder */}
         <img src="/logo.png" alt="Logo" className="App-navbar-logo" />
-        <Link to="/" className="App-navbar-link">SolidBase Construction</Link>
+        <span className="App-navbar-title">SolidBase Construction</span> {/* Changed to plain text */}
       </div>
       <div className="App-navbar-center">
         <Link to="/" className="App-navbar-link">Home</Link>

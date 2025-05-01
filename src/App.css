@@ -122,7 +122,7 @@ body {
   position: relative; /* Allow the navbar to scroll off the screen */
   width: 100%; /* Full width of the parent container */
   background-color: #1e1e1e; /* Slightly lighter dark background */
-  padding: 10px 20px; /* Adjust padding to avoid extra space */
+  padding: 5px 15px; /* Reduce padding to shrink the height */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -130,6 +130,7 @@ body {
   z-index: 1000; /* Ensure it stays above other elements */
   margin: 0; /* Remove any default margins */
   box-sizing: border-box; /* Ensure padding is included in width calculation */
+  height: 50px; /* Set a fixed height for the navbar */
 }
 
 .App-navbar-left {
@@ -138,8 +139,15 @@ body {
 }
 
 .App-navbar-logo {
-  height: 60px; /* Increased the height to make the logo bigger */
+  height: 40px; /* Adjust the logo height to fit the smaller navbar */
   margin-right: 10px;
+}
+
+.App-navbar-title {
+  font-size: 1.2rem; /* Adjust font size for the title */
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
 }
 
 .App-navbar-center {
