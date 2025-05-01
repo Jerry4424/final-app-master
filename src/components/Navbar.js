@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css'; // Import the CSS file for styling
+import '../App.css'; 
 
 function Navbar() {
   return (
     <nav className="App-navbar">
       <div className="App-navbar-left">
-        {/* Use the logo from the public folder */}
         <img src="/logo.png" alt="Logo" className="App-navbar-logo" />
-        <span className="App-navbar-title">SolidBase Construction</span> {/* Changed to plain text */}
+        <span className="App-navbar-title">SolidBase Construction</span>
       </div>
       <div className="App-navbar-center">
         <Link to="/" className="App-navbar-link">Home</Link>
@@ -18,7 +17,6 @@ function Navbar() {
         <Link to="/login" className="App-navbar-link">Login</Link>
       </div>
       <div className="App-navbar-right">
-        {/* Cart icon link */}
         <Link to="/cart">
           <img
             src="/cart.png"

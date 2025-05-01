@@ -4,7 +4,7 @@ export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState({
-    selectedItems: [], // Initialize with an empty array
+    selectedItems: [], 
   });
 
   const [services, setServices] = useState([

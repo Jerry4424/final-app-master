@@ -1,47 +1,47 @@
-/* General Reset */
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden; 
 }
 
 body {
-  background-color: #121212; /* Dark background */
+  background-color: #121212; 
   font-family: 'Arial', sans-serif;
-  color: white; /* White text */
+  color: white; 
 }
 
-/* General App Styles */
+
 .App {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Make the app take the full height of the viewport */
+  height: 100vh; 
   margin: 0;
   padding: 0;
   text-align: center;
   color: white;
-  background-color: #121212; /* Dark background */
+  background-color: #121212; 
 }
 
-/* Homepage Content */
+
 .App-main-content {
-  flex-grow: 1; /* Allow the content to grow and fill the remaining space */
+  flex-grow: 1; 
   padding: 20px;
-  background-color: #1e1e1e; /* Slightly lighter dark background */
-  color: white; /* White text for contrast */
+  background-color: #1e1e1e; 
+  color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center the content vertically */
-  align-items: center; /* Center the content horizontally */
+  justify-content: center; 
+  align-items: center; 
 }
 
-/* Logo */
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  display: none; /* Hide the spinning logo */
+  display: none; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -59,14 +59,14 @@ body {
   }
 }
 
-/* Header */
+
 .App-header {
-  background-color: #1e1e1e; /* Slightly lighter dark background */
+  background-color: #1e1e1e; 
   padding: 10px 20px;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
-  flex-shrink: 0; /* Prevent the header from shrinking */
+  flex-shrink: 0; 
 }
 
 .App-header h1 {
@@ -81,11 +81,10 @@ body {
   margin-bottom: 30px;
 }
 
-/* Links */
 .App-link {
   display: inline-block;
-  background-color: #00a651; /* Sage's green */
-  color: white; /* White text */
+  background-color: #00a651; 
+  color: white;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -95,19 +94,18 @@ body {
 }
 
 .App-link:hover {
-  background-color: #007a3d; /* Darker green for hover */
+  background-color: #007a3d; 
 }
 
-/* Content */
 .App-content {
   padding: 40px 20px;
   text-align: left;
-  color: white; /* White text */
+  color: white;
 }
 
 .App-content h2 {
   font-size: 2rem;
-  color: #00a651; /* Sage's green for headings */
+  color: #00a651; 
   margin-bottom: 20px;
 }
 
@@ -117,20 +115,20 @@ body {
   margin-bottom: 20px;
 }
 
-/* Navbar */
+
 .App-navbar {
-  position: relative; /* Allow the navbar to scroll off the screen */
-  width: 100%; /* Full width of the parent container */
-  background-color: #1e1e1e; /* Slightly lighter dark background */
-  padding: 5px 15px; /* Reduce padding to shrink the height */
+  position: relative;
+  width: 100%; 
+  background-color: #1e1e1e; 
+  padding: 5px 15px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #00a651; /* Sage's green border */
-  z-index: 1000; /* Ensure it stays above other elements */
-  margin: 0; /* Remove any default margins */
-  box-sizing: border-box; /* Ensure padding is included in width calculation */
-  height: 50px; /* Set a fixed height for the navbar */
+  border-bottom: 2px solid #00a651; 
+  z-index: 1000; 
+  margin: 0; 
+  box-sizing: border-box; 
+  height: 50px; 
 }
 
 .App-navbar-left {
@@ -139,12 +137,12 @@ body {
 }
 
 .App-navbar-logo {
-  height: 40px; /* Adjust the logo height to fit the smaller navbar */
+  height: 40px; 
   margin-right: 10px;
 }
 
 .App-navbar-title {
-  font-size: 1.2rem; /* Adjust font size for the title */
+  font-size: 1.2rem;
   font-weight: bold;
   color: white;
   margin-left: 10px;
@@ -152,21 +150,21 @@ body {
 
 .App-navbar-center {
   display: flex;
-  justify-content: center; /* Center the links */
+  justify-content: center; 
   flex-grow: 1;
-  gap: 20px; /* Add spacing between links */
-  margin-left: auto; /* Push the links to the center */
-  margin-right: auto; /* Ensure the links stay centered */
+  gap: 20px; 
+  margin-left: auto; 
+  margin-right: auto; 
 }
 
 .App-navbar-link {
   text-decoration: none;
-  color: white; /* White text for links */
+  color: white; 
   font-weight: bold;
 }
 
 .App-navbar-link:hover {
-  color: #00a651; /* Sage's green for hover */
+  color: #00a651; 
 }
 
 .App-navbar-right {
@@ -175,28 +173,28 @@ body {
 }
 
 .App-navbar-cart-icon {
-  height: 30px; /* Adjust the size of the cart icon */
+  height: 30px; 
   cursor: pointer;
 }
 
 .App-navbar-text {
-  font-size: 1.2rem; /* Adjust font size for the text */
-  color: white; /* White text */
+  font-size: 1.2rem; 
+  color: white; 
   font-weight: bold;
 }
 
-/* Footer */
+
 .App-footer {
-  background-color: #007a3d; /* Dark green background */
-  color: white; /* White text */
+  background-color: #007a3d; 
+  color: white; 
   padding: 10px;
   text-align: center;
   font-size: 0.9rem;
-  flex-shrink: 0; /* Prevent the footer from shrinking */
+  flex-shrink: 0; 
 }
 
 .App-footer a {
-  color: #00a651; /* Sage's green for links */
+  color: #00a651; 
   text-decoration: none;
 }
 
@@ -204,19 +202,19 @@ body {
   text-decoration: underline;
 }
 
-/* Special Offer Card */
+
 .App-special-offer-card {
-  border: 1px solid #00a651; /* Sage's green */
-  background-color: #2a2a2a; /* Dark card background */
+  border: 1px solid #00a651; 
+  background-color: #2a2a2a; 
   padding: 15px;
   margin: 10px;
   border-radius: 8px;
-  color: white; /* White text */
+  color: white; 
 }
 
 .App-special-offer-button {
-  background-color: #00a651; /* Sage's green */
-  color: white; /* White text */
+  background-color: #00a651; 
+  color: white; 
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -225,23 +223,23 @@ body {
 }
 
 .App-special-offer-button:hover {
-  background-color: #007a3d; /* Darker green for hover */
+  background-color: #007a3d; 
 }
 
-/* Product Card */
+
 .App-product-card {
   border: 1px solid #ccc;
   padding: 10px;
   margin: 10px;
   width: 200px;
   border-radius: 8px;
-  background-color: #2a2a2a; /* Dark card background */
-  color: white; /* White text */
+  background-color: #2a2a2a;
+  color: white;
 }
 
 .App-product-card-button {
-  background-color: #00a651; /* Sage's green */
-  color: white; /* White text */
+  background-color: #00a651; 
+  color: white; 
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -250,13 +248,13 @@ body {
 }
 
 .App-product-card-button:hover {
-  background-color: #007a3d; /* Darker green for hover */
+  background-color: #007a3d; 
 }
 
-/* Order Materials Page */
+
 .App-order-materials {
   padding: 20px;
-  color: white; /* White text */
+  color: white;
 }
 
 .App-order-item {
@@ -266,7 +264,7 @@ body {
 .App-order-button {
   margin-left: 10px;
   background-color: #00a651;
-  color: white; /* White text */
+  color: white; 
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
@@ -278,30 +276,29 @@ body {
 }
 
 .App-order-quantity-input {
-  width: 40px; /* Reduced width for smaller input boxes */
+  width: 40px; 
   margin: 0 10px;
   padding: 5px;
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #2a2a2a; /* Dark input background */
-  color: white; /* White text */
+  background-color: #2a2a2a; 
+  color: white; 
 }
 
 .App-order-quantity-input::-webkit-inner-spin-button,
 .App-order-quantity-input::-webkit-outer-spin-button {
-  -webkit-appearance: auto; /* Show the arrows for increasing/decreasing */
+  -webkit-appearance: auto; 
 }
 
 .App-order-quantity-input:focus {
   outline: none;
-  border-color: #00a651; /* Highlight border on focus */
+  border-color: #00a651; 
 }
 
-/* Admin Dashboard */
 .App-admin-dashboard {
   padding: 20px;
-  color: white; /* White text */
+  color: white; 
 }
 
 .App-admin-input {
@@ -313,12 +310,12 @@ body {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #2a2a2a; /* Dark input background */
-  color: white; /* White text */
+  background-color: #2a2a2a;
+  color: white; 
 }
 
 .App-admin-input button {
-  background-color: #00a651; /* Sage's green */
+  background-color: #00a651; 
   color: white;
   border: none;
   padding: 5px 10px;
@@ -327,7 +324,7 @@ body {
 }
 
 .App-admin-input button:hover {
-  background-color: #007a3d; /* Darker green for hover */
+  background-color: #007a3d; 
 }
 
 .App-admin-services {
@@ -340,11 +337,11 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  color: white; /* White text */
+  color: white; 
 }
 
 .App-admin-service-item button {
-  background-color: #ff4d4d; /* Red for remove */
+  background-color: #ff4d4d; 
   color: white;
   border: none;
   padding: 5px 10px;
@@ -356,63 +353,63 @@ body {
   background-color: #cc0000;
 }
 
-/* Admin Login */
+
 .App-login {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center everything horizontally */
-  justify-content: flex-start; /* Start content from the top */
-  width: 100%; /* Ensure the login content spans the full width */
-  height: 100%; /* Make the login section take the full height of its container */
-  padding: 0; /* Remove extra padding */
+  align-items: center; 
+  justify-content: flex-start; 
+  width: 100%; 
+  height: 100%; 
+  padding: 0; 
   text-align: center;
   color: white;
-  box-sizing: border-box; /* Include padding and borders in the height calculation */
-  margin-top: 100px; /* Push the login section down */
+  box-sizing: border-box; 
+  margin-top: 100px; 
 }
 
 .App-login-title {
   font-size: 24px;
-  margin-bottom: 30px; /* Add space between the title and the input fields */
+  margin-bottom: 30px; 
 }
 
 .App-login-form {
-  width: 100%; /* Ensure the form spans the full width */
+  width: 100%; 
   display: flex;
-  flex-direction: column; /* Stack the form elements vertically */
-  align-items: center; /* Center the form elements horizontally */
-  margin: 0 auto; /* Center the form horizontally */
-  max-width: 400px; /* Limit the width of the form */
+  flex-direction: column; 
+  align-items: center; 
+  margin: 0 auto; 
+  max-width: 400px; 
 }
 
 .App-login-input {
-  width: 100%; /* Make the input fields take the full width of their container */
-  padding: 10px 12px; /* Reduce the vertical padding to shrink the height by 10px */
-  margin: 10px 0; /* Add spacing between inputs */
+  width: 100%; 
+  padding: 10px 12px; 
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box; /* Ensure padding is included in the width */
+  box-sizing: border-box; 
 }
 
 .App-login-button {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 20px; /* Adjust padding for a larger button */
+  padding: 10px 20px; 
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 0; /* Remove extra margin */
-  width: auto; /* Ensure the button doesn't take excessive space */
+  margin-left: 0;
+  width: auto; 
 }
 
 .App-login-button:hover {
   background-color: #0056b3;
 }
 
-/* Admin and Login Buttons */
+
 .App-login-link button,
 .App-admin-link button {
-  background-color: #007bff; /* Blue for buttons */
+  background-color: #007bff; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -423,20 +420,19 @@ body {
 
 .App-login-link button:hover,
 .App-admin-link button:hover {
-  background-color: #0056b3; /* Darker blue for hover */
+  background-color: #0056b3; 
 }
 
-/* Not Found Page */
 .App-not-found {
   text-align: center;
   margin-top: 50px;
-  color: white; /* White text */
+  color: white; 
 }
 
-/* Cart Page */
+
 .App-cart {
   padding: 20px;
-  color: white; /* White text */
+  color: white; 
 }
 
 .App-cart-item {
@@ -444,16 +440,16 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  padding-bottom: 10px; /* Add padding below the item for spacing */
-  border-bottom: 1px solid #ccc; /* Add a line under each item */
+  padding-bottom: 10px; 
+  border-bottom: 1px solid #ccc; 
 }
 
 .App-cart-item:last-child {
-  border-bottom: none; /* Remove the line under the last item */
+  border-bottom: none; 
 }
 
 .App-cart-remove-button {
-  background-color: #ff4d4d; /* Red for remove */
+  background-color: #ff4d4d; 
   color: white;
   border: none;
   padding: 5px 10px;
@@ -463,11 +459,11 @@ body {
 }
 
 .App-cart-remove-button:hover {
-  background-color: #cc0000; /* Darker red for hover */
+  background-color: #cc0000; 
 }
 
 .App-cart-order-button {
-  background-color: #00a651; /* Sage's green */
+  background-color: #00a651; 
   color: white;
   border: none;
   padding: 10px 15px;
@@ -477,23 +473,23 @@ body {
 }
 
 .App-cart-order-button:hover {
-  background-color: #007a3d; /* Darker green for hover */
+  background-color: #007a3d; 
 }
 
 .App-cart-item:hover {
-  background-color: #2a2a2a; /* Slightly darker background on hover */
+  background-color: #2a2a2a; 
   transition: background-color 0.3s ease;
 }
 
 .App-login-inline {
   display: flex;
-  gap: 15px; /* Add spacing between the email, password, and button */
-  justify-content: center; /* Center the inputs and button horizontally */
-  align-items: center; /* Align items vertically */
-  flex-wrap: nowrap; /* Prevent wrapping */
-  width: 100%; /* Ensure the container spans the full width */
-  padding: 0; /* Remove any extra padding */
-  box-sizing: border-box; /* Ensure padding and borders are included in width */
-  max-width: 500px; /* Limit the width of the form */
-  margin: 0 auto; /* Center the container horizontally if needed */
+  gap: 15px; 
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: nowrap; 
+  width: 100%; 
+  padding: 0; 
+  box-sizing: border-box; 
+  max-width: 500px; 
+  margin: 0 auto; 
 }

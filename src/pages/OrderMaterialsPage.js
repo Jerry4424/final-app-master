@@ -3,8 +3,8 @@ import { UserContext } from '../UserContext';
 import '../App.css';
 
 function OrderMaterialsPage() {
-  const { user, setUser, services } = useContext(UserContext); // Use services from UserContext
-  const [quantities, setQuantities] = useState({}); // Track quantities for each item
+  const { user, setUser, services } = useContext(UserContext); 
+  const [quantities, setQuantities] = useState({}); 
 
   const handleQuantityChange = (itemName, value, maxQuantity) => {
     const quantity = Math.max(1, parseInt(value) || 1);
@@ -24,11 +24,11 @@ function OrderMaterialsPage() {
       return;
     }
 
-    const quantity = quantities[item.name] || 1; // Default to 1 if no quantity is specified
+    const quantity = quantities[item.name] || 1; 
     const existingItem = user.selectedItems.find((selectedItem) => selectedItem.name === item.name);
 
     if (existingItem) {
-      // If the item already exists, increase its quantity
+
       const newQuantity = existingItem.quantity + quantity;
       if (item.maxQuantity === 0 || newQuantity <= item.maxQuantity) {
         setUser((prev) => ({
@@ -44,7 +44,6 @@ function OrderMaterialsPage() {
         alert(`You cannot order more than ${item.maxQuantity} of ${item.name}`);
       }
     } else {
-      // If the item doesn't exist, add it
       if (item.maxQuantity === 0 || quantity <= item.maxQuantity) {
         setUser((prev) => ({
           ...prev,

@@ -1,41 +1,41 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { UserContext } from '../UserContext';
 import { saveToLocalStorage, loadFromLocalStorage, removeFromLocalStorage } from '../utils/localStorage';
-import '../App.css'; // Import the CSS file for styling
+import '../App.css'; 
 
 function AdminDashboardPage() {
-  const { services, setServices } = useContext(UserContext); // Use services from UserContext
+  const { services, setServices } = useContext(UserContext); 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [newService, setNewService] = useState('');
-  const [maxQuantity, setMaxQuantity] = useState(0); // Track max quantity for the new service
+  const [maxQuantity, setMaxQuantity] = useState(0); 
 
-  // Hardcoded admin credentials
+
   const adminEmail = 'admin@example.com';
   const adminPassword = 'admin123';
 
-  // Default services
+
   const defaultServices = [
-    { name: 'Materials', maxQuantity: 0 }, // No limit
-    { name: 'Labor', maxQuantity: 1 }, // Limit of 1
-    { name: 'Packages', maxQuantity: 0 }, // No limit
+    { name: 'Materials', maxQuantity: 0 },
+    { name: 'Labor', maxQuantity: 1 }, 
+    { name: 'Packages', maxQuantity: 0 }, 
   ];
 
-  // Load login state and services from localStorage on component mount
+
   useEffect(() => {
     const savedLoginState = loadFromLocalStorage('isAdminLoggedIn', false);
     setIsLoggedIn(savedLoginState);
 
     const savedServices = loadFromLocalStorage('services', []);
     if (Array.isArray(savedServices) && savedServices.length > 0) {
-      setServices(savedServices.filter((service) => service.name && service.name.trim() !== '')); // Filter out blank services
+      setServices(savedServices.filter((service) => service.name && service.name.trim() !== '')); 
     } else {
-      setServices(defaultServices); // Set default services if none are found
+      setServices(defaultServices); 
     }
   }, [setServices]);
 
-  // Save services to localStorage whenever they change
+
   useEffect(() => {
     saveToLocalStorage('services', services);
   }, [services]);
@@ -44,7 +44,7 @@ function AdminDashboardPage() {
     e.preventDefault();
     if (email === adminEmail && password === adminPassword) {
       setIsLoggedIn(true);
-      saveToLocalStorage('isAdminLoggedIn', true); // Save login state
+      saveToLocalStorage('isAdminLoggedIn', true); 
     } else {
       alert('Invalid admin credentials!');
     }
@@ -52,7 +52,7 @@ function AdminDashboardPage() {
 
   const handleLogout = () => {
     setIsLoggedIn(false);
-    removeFromLocalStorage('isAdminLoggedIn'); // Clear login state
+    removeFromLocalStorage('isAdminLoggedIn'); 
   };
 
   const handleAddService = () => {

@@ -11,20 +11,20 @@ import NotFoundPage from './pages/NotFoundPage';
 import CartPage from './pages/CartPage';
 
 function AppRouter() {
-  const { user } = useContext(UserContext);// this gets user info
+  const { user } = useContext(UserContext);
 
   return (
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
           path="/order"
-          element={user ? <OrderMaterialsPage /> : <NotFoundPage />} // this checks if user logged in
+          element={user ? <OrderMaterialsPage /> : <NotFoundPage />} 
         />
         <Route path="/admin" element={<AdminDashboardPage />} />
         <Route path="/account" element={<UserAccountPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="/cart" element={<CartPage />} /> {/* Ensure this route exists */}
+        <Route path="/cart" element={<CartPage />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/cart" element={<CartPage />} />
       </Routes>
