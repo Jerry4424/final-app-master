@@ -19,6 +19,11 @@ function OrderMaterialsPage() {
   };
 
   const handleSelectItem = (item) => {
+    if (!user || !user.selectedItems) {
+      console.error('User or selectedItems is undefined');
+      return;
+    }
+
     const quantity = quantities[item.name] || 1; // Default to 1 if no quantity is specified
     const existingItem = user.selectedItems.find((selectedItem) => selectedItem.name === item.name);
 
